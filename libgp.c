@@ -1,8 +1,8 @@
-#include "stdafx.h"
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-unsigned int readInt(FILE* f) {
+unsigned int readInt(FILE * f) {
 	char buf[4] = {0, 0, 0, 0};
 	unsigned int val;
 	fread(buf,sizeof(int), 1, f);
@@ -308,15 +308,14 @@ void readMeasure(FILE* f) {
 	hasDoubleBar = ((header & 0x80) != 0);
 }
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 	int i, j;
 	int tripletFeel, lyricsTrackNumber, tempo, type, octave, numberOfMeasures, numberOfTracks, numberOfNotes;
 	char* version, title, subtitle, interprete, album, authorSong, copyright, autorPiece, instruction;
 	FILE* f;
 
-	// f = fopen("C:\\Documenti\\roba\\DGuitar-0.5.8\\DGuitar-0.5.8\\files\\ritmos varios.gp4", "r");
-	f = fopen("C:\\Documenti\\roba\\The Tell-tale Heart.gp4", "rb");
+	f = fopen("test.gp4", "rb");
 
 	version = readVersion(f);
 	title = readStringIntegerPlusOne(f);
