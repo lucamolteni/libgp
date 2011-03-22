@@ -1,0 +1,9 @@
+= libgp version 0.1 alpha =
+
+This is the first commit of a C library to parse Guitar Pro's files.
+
+I don't think that we should lose all GP's files only because it's a propetary format.
+
+We may need to parse these files in the future.
+
+Originally ported from DGuitar http://dguitar.sourceforge.net/ project
